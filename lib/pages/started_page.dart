@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'second_page.dart';
+import 'package:job_application/pages/signin_page.dart';
 
 class GetStartedPage extends StatelessWidget {
   @override
@@ -55,13 +55,7 @@ class GetStartedPage extends StatelessWidget {
                             backgroundColor: Color(0xffFFFFFF),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(66))),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => SecondPage()),
-                          );
-                        },
+                        onPressed: () {},
                         child: Text(
                           'Get Started',
                           style: GoogleFonts.poppins(
@@ -81,7 +75,13 @@ class GetStartedPage extends StatelessWidget {
                       width: 200,
                       height: 45,
                       child: OutlinedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SignInPages()),
+                          );
+                        },
                         style: OutlinedButton.styleFrom(
                             side: BorderSide(
                               color: Colors.white,
